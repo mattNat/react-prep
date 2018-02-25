@@ -28,4 +28,38 @@ const objA = {
  
  console.log(Object.assign({}, objA, objB)); // => {foo: "something else", bar: "bar", bizz: "bizz", bang: "bang"}
 
- 
+// classes
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  talk() {
+    console.log(`${this.name} makes a noise`);
+  }
+}
+
+const fido = new Animal('fido');
+fido.talk();
+
+const pluto = new Animal('pluto');
+pluto.talk();
+
+// classes can inherit other classes
+
+// parent class of dog is animal
+class Dog extends Animal {
+  constructor(name, breed) {
+    // super calls the constructor of the parent class
+    super(name);
+    this.breed = breed;
+  }
+
+  speak() {
+    console.log(`${this.name} barks`);
+  }
+}
+
+const lassie = new Dog('lassie', 'Rough collie');
+lassie.speak(); // lassie barks
+
