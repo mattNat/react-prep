@@ -27,3 +27,5 @@ const objA = {
  };
  
  console.log(Object.assign({}, objA, objB)); // => {foo: "something else", bar: "bar", bizz: "bizz", bang: "bang"}
+
+ 
