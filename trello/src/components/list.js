@@ -19,6 +19,7 @@ export default class List extends React.Component {
     render() {
         const cards = this.state.cards.map((card, index) =>
             <li key={index}>
+                {/* or <Card {card.text} /> */}
                 <Card {...card} />
             </li>
         );
